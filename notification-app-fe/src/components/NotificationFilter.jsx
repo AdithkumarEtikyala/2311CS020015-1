@@ -7,6 +7,7 @@ export function NotificationFilter({ value, onChange }) {
     <ToggleButtonGroup
       value={value}
       exclusive
+      onChange={(_, newValue) => newValue !== null && onChange(newValue)}
       size="small"
       sx={{ flexWrap: "wrap", gap: 0.5 }}
     >
